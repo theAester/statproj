@@ -30,6 +30,6 @@ for s in range(5):
 	JR += R
 JT/=5
 JR/=5
-print(f"{JT}\n{JR}")4533
+print(f"{JT}\n{JR}")
 	
 	
