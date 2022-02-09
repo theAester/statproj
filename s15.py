@@ -6,7 +6,9 @@ from numpy.random import rand
 import numpy as np
 from real import genReal
 from make import makeGraph
-
+###################################
+############see s14.py#############
+###################################
 n= 150
 p = 0.2
 m = 3000
@@ -16,7 +18,7 @@ Y=[]
 for x in X:
     S = 0
     for i in range(100):
-        G = makeGraph(int(x),4/x)
+        G = makeGraph(int(x),4/x) #same as s14.py but p = 4/n
         for j in range(int(x)):
             if G.degree[j] == 0:
                 S+=1

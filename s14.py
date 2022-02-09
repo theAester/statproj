@@ -10,9 +10,8 @@ from make import makeGraph
 n= 150
 p = 0.2
 m = 3000
-X = np.linspace(10,150,15)
-print(X)
-Y=[]
+X = np.linspace(10,150,15) #list of values of n
+Y=[] #for plotting
 for x in X:
     S = 0
     for i in range(100):
@@ -21,8 +20,8 @@ for x in X:
             if G.degree[j] == 0:
                 S+=1
                 break
-    S/=100
-    Y.append(S)
+    S/=100 #same as 213.py
+    Y.append(S) #add to y-axis values
 _,ax = plt.subplots()
-ax.plot(X,Y)
+ax.plot(X,Y) #plot
 plt.show()

@@ -5,6 +5,7 @@ from numpy.random import randint
 from numpy.random import rand
 from real import genReal
 from make import makeGraph
+#this module will use nx random graph generator
 import numpy as np
 
 n= 1000
@@ -19,15 +20,19 @@ for s in range(10):
     v = 0
     for i in range(n):
         Y.append(G.degree[i])
+        #a list of all degrees
         v+= G.degree[i]
     L = v/n
+    #mean of friendships
     for i in range(n):
     	if(G.degree[i] > L):
     		J+=1
+            #social persons
             
 _,ax = plt.subplots()
 ax.hist(Y)
 J/=10
+#average of the graphs
 print(J)
 plt.show()
 

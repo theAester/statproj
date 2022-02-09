@@ -12,9 +12,9 @@ p = 0.2
 m = 3000
 S = 0.0
 for i in range(100):
-    G = makeGraph(n,p)
-    for j in range(n):
-        if G.degree[j] == 0:
-            S+=1
-            break
-print(S/100)
+    G = makeGraph(n,p) #make graph
+    for j in range(n): #iterate through degree of nodes
+        if G.degree[j] == 0: #if a node is stray 
+            S+=1 #add to number of strays 
+            break #and make the graph again
+print(S/100) #average the number of graphs with a stray node

@@ -6,7 +6,9 @@ from numpy.random import rand
 import numpy as np
 from real import genReal
 from make import makeGraph
-
+###################################
+############see s10.py#############
+###################################
 n= 100
 p = 0.34
 m = 3000
@@ -16,7 +18,7 @@ Y=[]
 for x in X:
     T = 0
     for i in range(100):
-        G = makeGraph(int(x),p)
+        G = makeGraph(int(x),p)  #same as s10.py but p is constanct
         A = nx.adjacency_matrix(G).todense().tolist()
         A2 = np.matmul(A,A)
         tr = 0
